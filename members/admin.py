@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Current, Alumni
 
-# Register your models here.
+admin.site.register(Current)
+admin.site.register(Alumni)
+
