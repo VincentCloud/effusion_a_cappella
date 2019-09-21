@@ -1,0 +1,37 @@
+*{
+    background-color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.bg-custom{
+    background-color: #000000;
+}
+.text-dark{
+    font-size: 30px!important;
+}
+
+#navigation{
+    margin-bottom: 0px!important;
+}
+
+
+a.nav-link{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    color: #ffffff!important;
+    opacity: 1.0!important;
+}
+
+#logo{
+    height: 75px;
+}
+
+#intro{
+    padding-top: 20px;
+}
+
+
+#about{
+    font-size: 20px!important;
+    color: white;
+}
+
