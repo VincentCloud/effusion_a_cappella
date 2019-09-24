@@ -1,5 +1,5 @@
 *{
-    background-color: black;
+    background-color: black!important;
     font-family: 'Josefin Sans', sans-serif;
 }
 .bg-custom{
@@ -11,6 +11,10 @@
 
 #navigation{
     margin-bottom: 0px!important;
+}
+
+footer.text-muted {
+    padding-top: 30px!important;
 }
 
 
@@ -34,4 +38,5 @@ a.nav-link{
     font-size: 20px!important;
     color: white;
 }
+
 
