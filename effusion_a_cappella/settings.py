@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'emailsender.apps.EmailsenderConfig',
     'members.apps.MembersConfig',
     'videos.apps.VideosConfig',
     'events.apps.EventsConfig',

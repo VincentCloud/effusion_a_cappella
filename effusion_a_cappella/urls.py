@@ -20,11 +20,13 @@ from django.conf.urls.static import static
 import events.views
 import members.views
 import videos.views
+import emailsender.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', events.views.home, name='home'),
     path('events', events.views.events, name='events'),
     path('members', members.views.members, name='members'),
-    path('videos', videos.views.videos, name='videos')
+    path('videos', videos.views.videos, name='videos'),
+    path('contact', emailsender.views.emailsender, name='emailsender')
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
