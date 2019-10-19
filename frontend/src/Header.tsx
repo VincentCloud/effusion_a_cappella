@@ -16,7 +16,12 @@ const Header: React.FC = () => (
     <ul>
       <li><Link to="/members">members</Link></li>
       <li><Link to="/media">media</Link></li>
-      <li><Link to="/contact">contact</Link></li>
+      <li>
+        {/* <Link to="/contact">contact</Link> */}
+        <a onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
+          contact
+        </a>
+      </li>
     </ul>
   </nav>
 );
