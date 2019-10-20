@@ -5,10 +5,10 @@ const About: React.FC = () => (
   <div>
     <h1>about</h1>
     <p>
-      Formed {new Date().getFullYear() - 1999} years ago in 1999, Effusion
-      started off a small and humble group of musical geniuses who laid a
-      foundation of soul haunting repertoire and mind-numbing good looks for
-      future generations to build upon. 16 years, 3 CDs, and countless roadtrips
+      Formed in 1999, Effusion started off a small and humble group of musical
+      geniuses who laid a foundation of soul haunting repertoire and
+      mind-numbing good looks for future generations to build upon. {
+      new Date().getFullYear() - 1999} years, 3 CDs, and countless roadtrips
       later, Effusion is still laughing, good-time-ing, and making sweet a
       cappella.
     </p>

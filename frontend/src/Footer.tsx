@@ -45,7 +45,13 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <div className="App-footer-credit">
-          <FaCode /> with <FaHeart /> by Jacob Peng &amp; Chenzhun Huang
+          <FaCode /> with <FaHeart /> by
+          <a
+            href="https://pengmai.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          > Jacob Peng </a>
+          &amp; Chenzhun Huang
         </div>
       </div>
       <div className="contact">
