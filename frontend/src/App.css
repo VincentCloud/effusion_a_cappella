@@ -49,6 +49,9 @@ body {
   width: 100%;
 }
 
+.nav * {
+  box-sizing: border-box;
+}
 .nav {
   height: 80px;
   width: 100%;
@@ -64,7 +67,7 @@ body {
   display: inline-block;
   font-size: 22px;
   color: #fff;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
 
 .nav > .nav-btn {
@@ -133,8 +136,8 @@ body {
   height: 0px;
 }
 .nav > #nav-check:checked ~ .nav-links {
-  /* height: calc(100vh - 50px); */
-  height: 800px;
+  height: calc(100vh - 50px);
+  /* height: 800px; */
   overflow-y: auto;
 }
 .nav > #nav-check:checked ~ body {
