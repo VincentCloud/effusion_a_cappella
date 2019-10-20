@@ -28,5 +28,5 @@ urlpatterns = [
     path('events', events.views.events, name='events'),
     path('members', members.views.members, name='members'),
     path('videos', videos.views.videos, name='videos'),
-    path('contact', emailsender.views.emailsender, name='emailsender')
+    path('contact', emailsender.views.sendemail, name='emailsender')
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
