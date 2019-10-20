@@ -9,7 +9,8 @@ import Media from './Media';
 import Members from './Members';
 import News from './News';
 
-import './App.css';
+import './styles/App.css';
+import './styles/members.css';
 
 const App: React.FC = () => {
   return (

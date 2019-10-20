@@ -5,6 +5,7 @@ body {
   /* background-image: url('images/effusion_concert.jpg'); */
   background-size: 100%;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 #logo {
@@ -124,6 +125,7 @@ body {
   background-color: #151a22;
   height: 0px;
   transition: all 0.2s ease-in;
+  z-index: 2;
   overflow-y: hidden;
   top: 60px;
   left: 0px;
@@ -295,7 +297,7 @@ blockquote:nth-of-type(even) footer:after {
   cursor: not-allowed;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   #logo {
     margin: 0 20px;
     min-height: 75px;
@@ -318,7 +320,7 @@ blockquote:nth-of-type(even) footer:after {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 992px) {
   .App > .app-body {
     /* padding: 0 20px; */
     max-width: 950px;
@@ -386,6 +388,6 @@ blockquote:nth-of-type(even) footer:after {
   font-size: 0.8em;
 }
 
-label {
+.App-footer label {
   display: none;
 }
