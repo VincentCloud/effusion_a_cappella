@@ -16,22 +16,6 @@
   width: 99% !important;
 }
 
-@media (min-width: 576px) {
-  .App-member {
-    width: 50%;
-  }
-
-  .App-member img {
-    width: calc(100% - 3px);
-  }
-}
-
-@media (min-width: 768px) {
-  .App-member {
-    width: 25%;
-  }
-}
-
 span.App-member-caption {
   display: table;
   border-radius: 2px;
@@ -72,4 +56,24 @@ span.App-member-caption span:not(.no-hover):hover {
 
 .App-member-caption small {
   font-size: 0.5em;
+}
+
+@media (min-width: 576px) {
+  .App-member {
+    width: 50%;
+  }
+
+  .App-member img {
+    width: calc(100% - 3px);
+  }
+}
+
+@media (min-width: 768px) {
+  .App-member {
+    width: 25%;
+  }
+
+  span.App-member-caption > span {
+    font-size: 2em;
+  }
 }

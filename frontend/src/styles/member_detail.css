@@ -16,6 +16,7 @@
 .App-modal-content {
   margin: 1.75rem auto;
   width: 90%;
+  max-width: 900px;
   padding: 10px;
   background-color: #151a22;
   border-radius: 3px;
@@ -45,6 +46,10 @@
 .App-member-panel {
   font-weight: 300;
   padding: 18px;
+}
+
+.App-markdown-container {
+  margin-top: 25px;
 }
 
 .App-member-panel h1,
