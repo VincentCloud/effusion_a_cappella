@@ -323,11 +323,11 @@ blockquote:nth-of-type(even) footer:after {
 @media (min-width: 992px) {
   .App > .app-body {
     /* padding: 0 20px; */
-    max-width: 950px;
+    max-width: 952px;
   }
 
   .App > .App-footer {
-    max-width: 950px;
+    max-width: 952px;
     display: flex;
     justify-content: space-around;
   }
