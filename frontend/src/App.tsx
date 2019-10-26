@@ -12,6 +12,7 @@ import News from './News';
 import './styles/App.css';
 import './styles/member_detail.css';
 import './styles/members.css';
+import './styles/news.css';
 
 const App: React.FC = () => {
   return (

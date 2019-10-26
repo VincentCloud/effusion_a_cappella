@@ -1,0 +1,24 @@
+.App-news-post h1 {
+  /* text-decoration: underline; */
+  font-size: 2.5em;
+  font-weight: 200;
+  margin-bottom: 4px;
+  box-shadow: inset 0 0px 0 white, inset 0 -1px 0 black;
+}
+
+.App-news-post-date {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.App-news-post {
+  font-weight: 300;
+}
+
+/* @media (min-width: 576px) {
+  .App-news-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+} */

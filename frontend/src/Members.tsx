@@ -33,6 +33,7 @@ Italian, and a little bit of Catalan.
     years: `'16, '17, '18, '19`
   },
   {
+    bio: '',
     execPosition: 'Music Director',
     name: 'Jiayin Huang',
     part: 'Mezzo',
@@ -40,12 +41,14 @@ Italian, and a little bit of Catalan.
     years: `'18, '19`
   },
   {
+    bio: '',
     name: 'Pauline Rivera',
     part: 'Alto',
     src: 'https://effusion.ca/wp-content/uploads/2017/02/Pauline-featured.jpg',
     years: `'16, '17, '18, '19`
   },
   {
+    bio: '',
     execPosition: 'VP Finance',
     name: 'Vincent Huang',
     part: 'Bass',
@@ -53,12 +56,14 @@ Italian, and a little bit of Catalan.
     years: `'19`
   },
   {
+    bio: '',
     name: 'Hrichik Sarker',
     part: 'Baritone',
     src: 'https://effusion.ca/wp-content/uploads/2017/02/Hrichik.jpg',
     years: `'16, '17, '18, '19`
   },
   {
+    bio: '',
     execPosition: 'VP Internal',
     name: 'Celia Benhocine',
     part: 'Alto',
@@ -66,6 +71,7 @@ Italian, and a little bit of Catalan.
     years: `'18, '19`
   },
   {
+    bio: '',
     execPosition: 'VP Publicity',
     name: 'Mandy Tardif',
     part: 'Mezzo',
@@ -73,24 +79,28 @@ Italian, and a little bit of Catalan.
     years: `'18, '19`
   },
   {
+    bio: '',
     name: 'Marc Darmohraj',
     part: 'Baritone',
     src: 'https://effusion.ca/wp-content/uploads/2016/02/Marc2.jpg',
     years: `'17, '18, '19`
   },
   {
+    bio: '',
     name: 'Ben Dringoli',
     part: 'Beatbox/Tenor',
     src: 'https://effusion.ca/wp-content/uploads/2016/02/Ben.jpg',
     years: `'17, '18, '19`
   },
   {
+    bio: '',
     name: 'Emmanuelle Martin',
     part: 'Mezzo',
     src: 'https://effusion.ca/wp-content/uploads/2015/05/Memma-featured.jpg',
     years: `'19`
   },
   {
+    bio: '',
     execPosition: 'VP External',
     name: 'Ella Stewart',
     part: 'Soprano',
@@ -98,30 +108,35 @@ Italian, and a little bit of Catalan.
     years: `'18, '19`
   },
   {
+    bio: '',
     name: 'Moses Otim',
     part: 'Bass',
     src: 'https://effusion.ca/wp-content/uploads/2015/05/Moses.jpg',
     years: `'18, '19`
   },
   {
+    bio: '',
     name: 'Eddy Yang',
     part: 'Tenor',
     src: 'https://effusion.ca/wp-content/uploads/2015/05/Eddy.jpg',
     years: `'17, '18, '19`
   },
   {
+    bio: '',
     name: 'Clemence Taisne',
     part: 'Alto',
     src: 'https://effusion.ca/wp-content/uploads/2017/04/Emma-1.jpg',
     years: `'19`
   },
   {
+    bio: '',
     name: 'Jacob Peng',
     part: 'Tenor',
     src: 'https://pengmai.github.io/static/media/me.16975ca4.jpg',
     years: `'19`
   },
   {
+    bio: '',
     name: 'Victor Wang',
     part: 'Bass',
     src: 'https://effusion.ca/wp-content/uploads/2016/02/Ben.jpg',

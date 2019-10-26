@@ -1,5 +1,5 @@
 export default interface IMember {
-  bio?: string;
+  bio: string;
   execPosition?: string;
   name: string;
   part: string;
