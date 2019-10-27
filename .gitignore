@@ -259,10 +259,7 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/django,windows,pycharm,virtualenv
 
 .idea/
-<<<<<<< HEAD
 .vscode/
 
-=======
 
 effusion/
->>>>>>> c642ac16186723fecb2cf8cd855d3f2c389a9bb2
