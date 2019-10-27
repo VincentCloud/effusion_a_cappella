@@ -34,8 +34,8 @@ const MobileHeader = () => {
       <div className="nav-links">
         <Link onClick={closeMenu} to="/about">about</Link>
         <Link onClick={closeMenu} to="/news">news &amp; events</Link>
-        <Link onClick={closeMenu} to="/media">media</Link>
         <Link onClick={closeMenu} to="/members">members</Link>
+        <Link onClick={closeMenu} to="/media">media</Link>
         <Link onClick={closeMenu} to="/contact">contact</Link>
       </div>
     </nav>
@@ -61,4 +61,4 @@ const DesktopHeader: React.FC = () => (
   </nav>
 );
 
-export default () => <><DesktopHeader/><MobileHeader /></>;
+export default () => <><DesktopHeader /><MobileHeader /></>;
