@@ -12,3 +12,7 @@ interface IVideo {
 
 type IMediaItem = IMediaPhoto | IVideo;
 export default IMediaItem;
+
+export interface IPlayer {
+  pauseVideo?: () => void;
+}
