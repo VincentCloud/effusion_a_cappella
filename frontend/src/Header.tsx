@@ -61,4 +61,4 @@ const DesktopHeader: React.FC = () => (
   </nav>
 );
 
-export default () => <><DesktopHeader/><MobileHeader /></>;
+export default () => <><DesktopHeader /><MobileHeader /></>;

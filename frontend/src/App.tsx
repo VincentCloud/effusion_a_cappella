@@ -10,6 +10,7 @@ import Members from './Members';
 import News from './News';
 
 import './styles/App.css';
+import './styles/media.css';
 import './styles/member_detail.css';
 import './styles/members.css';
 import './styles/news.css';

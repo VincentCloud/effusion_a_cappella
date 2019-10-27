@@ -1,0 +1,76 @@
+.App-media-preview {
+  position: relative;
+  margin-bottom: 3px;
+}
+
+span.App-media-preview-caption {
+  cursor: pointer;
+  height: 100.25%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #999;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+
+span.App-media-preview-caption span:first-child {
+  padding: 1em;
+  display: block;
+  line-height: 1;
+  font-size: 0.9em;
+}
+
+span.App-media-preview-caption:hover {
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.App-media-preview-playbutton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.App-media-preview-playbutton svg {
+  height: 50px;
+  width: 50px;
+}
+
+.App-media-preview img {
+  top: -9999px !important;
+  bottom: -9999px;
+  right: -9999px;
+  left: -9999px !important;
+  margin: auto;
+  width: auto !important;
+  height: 100%;
+}
+
+@media (min-width: 576px) {
+  .App-media-preview {
+    display: inline-block;
+  }
+
+  .App-media-preview > div {
+    width: 99% !important;
+  }
+
+  .App-media-preview {
+    width: 50%;
+  }
+
+  span.App-media-preview-caption {
+    width: 99.5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .App-media-preview {
+    width: 33.33%;
+  }
+}
