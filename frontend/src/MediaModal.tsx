@@ -19,6 +19,7 @@ const MediaPlayer: React.FC<IMediaPlayerProps> = props => {
     case 'video':
       return (
         <YouTube
+          className="App-youtube-player"
           videoId={props.item.id}
           opts={{
             playerVars: { autoplay: 1 }

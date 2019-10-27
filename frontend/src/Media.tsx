@@ -4,29 +4,6 @@ import Img from 'react-smooth-image';
 import MediaModal from './MediaModal';
 import IMediaItem, { IPlayer } from './models/IMediaItem';
 
-const mediaItems: IMediaItem[] = [
-  {
-    caption: 'Lovely Day - Effusion A Cappella (Cover of Bill Withers)',
-    id: 'fCOe0NWQth8',
-    type: 'video'
-  },
-  {
-    caption: 'A Long Walk - Effusion A Cappella (Jill Scott Cover)',
-    id: 'bDBqK7EhOq0',
-    type: 'video'
-  },
-  {
-    caption: 'Fall Concert 2014, Clockwork.',
-    src: 'https://effusion.ca/wp-content/uploads/2015/05/eff_l.jpg',
-    type: 'photo'
-  },
-  {
-    caption: 'Spring Concert 2014, In Bloom.',
-    src: 'https://effusion.ca/wp-content/uploads/2015/05/eff_g-e1430963962844.jpg',
-    type: 'photo'
-  }
-];
-
 const toPreview = (item: IMediaItem) => {
   switch (item.type) {
     case 'photo': return item;
@@ -60,7 +37,11 @@ const MediaPreview: React.FC<IMediaPreviewProps> = ({ item, onClick }) => {
   );
 };
 
-const Media = () => {
+interface IMediaProps {
+  mediaItems: IMediaItem[];
+}
+
+const Media: React.FC<IMediaProps> = ({ mediaItems }) => {
   const [selectedItem, setSelectedItem] = useState(mediaItems[0]);
   const [showModal, setShowModal] = useState(false);
   const [player, setPlayer] = useState({ pauseVideo: undefined } as IPlayer);

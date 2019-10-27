@@ -15,6 +15,8 @@ import './styles/member_detail.css';
 import './styles/members.css';
 import './styles/news.css';
 
+import sampleData from './sampleData';
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -29,13 +31,18 @@ const App: React.FC = () => {
               <About />
             </Route>
             <Route path="/news">
-              <News />
+              <News
+                posts={sampleData.news.map(post => ({
+                  ...post,
+                  date: new Date(post.date)
+                }))}
+              />
             </Route>
             <Route path="/members">
-              <Members />
+              <Members members={sampleData.members} />
             </Route>
             <Route path="/media">
-              <Media />
+              <Media mediaItems={sampleData.media} />
             </Route>
             <Route path="/contact">
               <Contact />
