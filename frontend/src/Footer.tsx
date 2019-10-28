@@ -51,7 +51,12 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           > Jacob Peng </a>
-          &amp; Chenzhun Huang
+          &amp; 
+          <a 
+          href="http://vincenthuang.info/"
+          target="_blank"
+          rel="noopener noreferrer"
+          > Chenzhun Huang </a>
         </div>
       </div>
       <div className="contact">
