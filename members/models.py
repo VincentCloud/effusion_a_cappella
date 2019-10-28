@@ -8,7 +8,7 @@ class Current(models.Model):
 
 
 class Alumni(models.Model):
-    picture = models.ImageField(upload_to='image/')
+    picture = models.ImageField(upload_to='images/')
     info = models.CharField(max_length=5000)
     year = models.CharField(max_length=100, default='')
 
