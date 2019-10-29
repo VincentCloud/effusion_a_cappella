@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './About';
-import Contact from './Contact';
 import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
@@ -44,9 +43,6 @@ const App: React.FC = () => {
               </Route>
               <Route path="/media">
                 <Media mediaItems={sampleData.media} />
-              </Route>
-              <Route path="/contact">
-                <Contact />
               </Route>
             </Switch>
           </div>
