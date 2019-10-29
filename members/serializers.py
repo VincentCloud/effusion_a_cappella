@@ -4,7 +4,10 @@ from members.models import Current, Alumni
 class CurrentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Current
-        fields = '__all__'
+        if Current.is_exec:
+            fields = ('bio', 'execPosition', 'name', 'part', 'src', 'years')
+        else:
+            fields = ('bio', 'name', 'part', 'src', 'years')
 
 class AlumniSerializer(serializers.ModelSerializer):
     class Meta:
