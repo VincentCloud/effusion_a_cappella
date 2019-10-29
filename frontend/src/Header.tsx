@@ -6,11 +6,11 @@ const MobileHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    document.body.style.position = !menuOpen ? 'fixed' : '';
+    document.body.style.overflow = !menuOpen ? 'hidden ' : 'auto';
   };
   const closeMenu = () => {
     setMenuOpen(false);
-    document.body.style.position = '';
+    document.body.style.overflow = 'auto';
   };
 
   return (
@@ -22,7 +22,7 @@ const MobileHeader = () => {
         onChange={toggleMenu}
       />
       <div className="nav-header">
-        <Link to="/">
+        <Link onClick={closeMenu} to="/">
           <img id="logo" src={logo} alt="effusion a cappella" />
         </Link>
       </div>
