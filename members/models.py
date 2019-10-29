@@ -5,7 +5,7 @@ class Current(models.Model):
     Model for the current members in Effusion
     '''
     bio = models.CharField(max_length=3000, default='')
-    execPosition = models.CharField(max_length=200, default='')
+    execPosition = models.CharField(max_length=200, default='', blank=True, null=True)
     name = models.CharField(max_length=200)
     part = models.CharField(max_length=200)
     src = models.ImageField(upload_to='images/') #modify this part
