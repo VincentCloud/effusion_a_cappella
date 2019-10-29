@@ -18,7 +18,17 @@ const Home: React.FC<IHomeProps> = ({ images }) => (
   >
     {images.map(image =>
       <div key={image.src} className="App-main-carousel-frame">
-        <div style={{backgroundImage: `url(${image.src})`}} />
+        <div
+          className="App-main-carousel-image"
+          style={{backgroundImage: `url(${image.src})`}}
+        />
+        <div className="App-main-carousel-caption">
+          <p>
+            {image.caption}
+            <br />
+            <small>Photo credits: {image.credits}</small>
+          </p>
+        </div>
       </div>
     )}
   </Slider>
