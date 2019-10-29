@@ -27,6 +27,6 @@ urlpatterns = [
     path('', events.views.home, name='home'),
     path('events', events.views.events, name='events'),
     path('', include('members.urls')),
-    path('videos', videos.views.videos, name='videos'),
+    path('', include('videos.urls')),
     path('contact', emailsender.views.sendemail, name='emailsender')
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
