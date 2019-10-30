@@ -3,13 +3,10 @@ import datetime
 
 
 class Event(models.Model):
-    image = models.ImageField(upload_to='images/')
-    heading1 = models.CharField(max_length=200)
-    body1 = models.TextField()
-    date1 = models.DateTimeField()
+    body = models.CharField(max_length=10000, default='')
+    date = models.DateField(auto_now_add=True, null=True, blank=True)
+    title = models.CharField(max_length=5000, default='')
 
-
-class Announcement(models.Model):
-    heading2 = models.CharField(max_length=200)
-    body2 = models.TextField()
-    date2 = models.DateTimeField()
+    def __str__(self):
+        return self.title
+    

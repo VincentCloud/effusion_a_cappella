@@ -24,8 +24,7 @@ import emailsender.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', events.views.home, name='home'),
-    path('events', events.views.events, name='events'),
+    path('', include('events.urls')),
     path('', include('members.urls')),
     path('', include('videos.urls')),
     path('contact', emailsender.views.sendemail, name='emailsender')

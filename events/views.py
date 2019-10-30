@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from events.models import Event
+from events.serializers import EventSerializer
+from rest_framework import generics
 
-
-def home(request):
-    return render(request, 'events/home.html')
-
-
-def events(request):
-    return render(request, 'events/events.html')
+class EventListCreate(generics.ListCreateAPIView):
+    '''
+    Generic API views for the Event models
+    '''
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
 
