@@ -1,0 +1,57 @@
+.app-body {
+  min-height: calc(100vh - 130px);
+}
+
+.slick-initialized {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.slick-list, .slick-list div:not(.App-main-carousel-caption) {
+  height: 100%;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+.slick-prev {
+  left: 3px;
+}
+.slick-next {
+  right: 3px;
+}
+
+.App-main-carousel-frame {
+  position: relative;
+  z-index: 0;
+}
+.App-main-carousel-frame div:not(.App-main-carousel-caption) {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.App-main-carousel-image {
+  z-index: 2;
+  /* display: none; */
+}
+
+.App-main-carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(21, 26, 34, 0.6);
+  /* border: 1px solid red; */
+}
+
+.App-main-carousel-caption > p {
+  margin: 0;
+  font-weight: 300;
+}

@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 import logo from './images/logo.svg';
 
 const MobileHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    document.body.style.position = !menuOpen ? 'fixed' : '';
+    document.body.style.overflow = !menuOpen ? 'hidden ' : 'auto';
   };
   const closeMenu = () => {
     setMenuOpen(false);
-    document.body.style.position = '';
+    document.body.style.overflow = 'auto';
   };
 
   return (
@@ -22,7 +23,7 @@ const MobileHeader = () => {
         onChange={toggleMenu}
       />
       <div className="nav-header">
-        <Link to="/">
+        <Link onClick={closeMenu} to="/">
           <img id="logo" src={logo} alt="effusion a cappella" />
         </Link>
       </div>
@@ -36,7 +37,12 @@ const MobileHeader = () => {
         <Link onClick={closeMenu} to="/news">news &amp; events</Link>
         <Link onClick={closeMenu} to="/members">members</Link>
         <Link onClick={closeMenu} to="/media">media</Link>
-        <Link onClick={closeMenu} to="/contact">contact</Link>
+        <button className="contact-button" onClick={() =>{
+          scroll.scrollToBottom();
+          closeMenu();
+        }}>
+          contact
+        </button>
       </div>
     </nav>
   );
@@ -56,7 +62,11 @@ const DesktopHeader: React.FC = () => (
     <ul>
       <li><Link to="/members">members</Link></li>
       <li><Link to="/media">media</Link></li>
-      <li><Link to="/contact">contact</Link></li>
+      <li>
+        <button className="contact-button" onClick={scroll.scrollToBottom}>
+          contact
+        </button>
+      </li>
     </ul>
   </nav>
 );
