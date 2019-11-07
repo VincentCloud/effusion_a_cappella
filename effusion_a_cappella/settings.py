@@ -58,8 +58,7 @@ ROOT_URLCONF = 'effusion_a_cappella.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'effusiondb',
-        'USER': 'postgres',
-        'PASSWORD': 'Zz19990518',
+        'USER': 'Appleliu',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432',
     }

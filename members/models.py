@@ -4,13 +4,13 @@ class Current(models.Model):
     '''
     Model for the current members in Effusion
     '''
-    bio = models.CharField(max_length=3000, default='')
+    bio = models.TextField(default='')
     execPosition = models.CharField(max_length=200, default='', blank=True, null=True)
     name = models.CharField(max_length=200)
     part = models.CharField(max_length=200)
     src = models.ImageField(upload_to='images/') #modify this part
+    thumbnail = models.ImageField(upload_to='images/', null=True)
     years = models.CharField(max_length=100, default='')
-    is_exec = models.BooleanField(default=False)
 
 
     def __str__(self):

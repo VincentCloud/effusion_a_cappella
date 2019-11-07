@@ -4,5 +4,6 @@ export default interface IMember {
   name: string;
   part: string;
   src: string;
+  thumbnail?: string;
   years: string;
 }

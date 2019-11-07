@@ -28,4 +28,4 @@ urlpatterns = [
     path('', include('members.urls')),
     path('', include('videos.urls')),
     path('contact', emailsender.views.sendemail, name='emailsender')
-] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
