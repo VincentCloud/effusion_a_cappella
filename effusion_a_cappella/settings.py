@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'members.apps.MembersConfig',
     'videos.apps.VideosConfig',
     'events.apps.EventsConfig',
+    'reactloader.apps.ReactloaderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

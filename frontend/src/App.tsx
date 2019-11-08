@@ -15,15 +15,16 @@ import './styles/member_detail.css';
 import './styles/members.css';
 import './styles/news.css';
 
-import sampleData from './sampleData';
+// import sampleData from './sampleData';
 
 const App: React.FC = () => {
+  const data = (window as any).EFFUSION_PARAMS;
   return (
     <div className="App">
       <Router>
         <Header />
           <Route path="/" exact={true}>
-            <Home images={sampleData.homeImages} />
+            <Home images={data.homeImages} />
           </Route>
           <div className="app-body">
             <Switch>
@@ -32,17 +33,17 @@ const App: React.FC = () => {
               </Route>
               <Route path="/news">
                 <News
-                  posts={sampleData.news.map(post => ({
+                  posts={data.news.map((post: any) => ({ // TODO: Fix this
                     ...post,
                     date: new Date(post.date)
                   }))}
                 />
               </Route>
               <Route path="/members">
-                <Members members={sampleData.members} />
+                <Members members={data.members} />
               </Route>
               <Route path="/media">
-                <Media mediaItems={sampleData.media} />
+                <Media mediaItems={data.media} />
               </Route>
             </Switch>
           </div>

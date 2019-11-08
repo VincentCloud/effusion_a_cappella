@@ -17,15 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-import events.views
-import members.views
-import videos.views
 import emailsender.views
+import reactloader.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('events.urls')),
-    path('', include('members.urls')),
-    path('', include('videos.urls')),
     path('contact', emailsender.views.sendemail, name='emailsender')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
+    path('', include('reactloader.urls'))
+]

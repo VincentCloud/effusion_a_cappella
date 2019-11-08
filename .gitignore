@@ -260,6 +260,7 @@ $RECYCLE.BIN/
 
 .idea/
 .vscode/
+.DS_Store
 
 
 effusion/
