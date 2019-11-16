@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { FaCode, FaFacebook, FaHeart, FaInstagram, FaYoutube } from 'react-icons/fa';
 
+const getCookie = (name: string) => {
+  if (document.cookie) {
+      const cookies = document.cookie.split(';');
+      for (const c of cookies) {
+        const cookie = c.trim();
+        if (cookie.substring(0, name.length + 1) === `${name}=`) {
+          return decodeURIComponent(cookie.substring(name.length + 1));
+        }
+      }
+  }
+  return '';
+};
+
 type InputHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 
 const Footer: React.FC = () => {
@@ -10,9 +23,30 @@ const Footer: React.FC = () => {
   const updateEmail: InputHandler = event => setEmail(event.target.value);
   const [message, setMessage] = useState('');
   const updateMessage: InputHandler = event => setMessage(event.target.value);
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+
   const handleSubmit: React.FormEventHandler = e => {
-    console.log(name, email, message);
     e.preventDefault();
+    const headers = {
+      'Content-Type': 'application/json',
+      'X-CSRFToken': getCookie('csrftoken')
+    };
+    const timeout = setTimeout(() => {
+      setLoading(true);
+      setError(false);
+    }, 100);
+    return fetch('/contact', {
+      body: JSON.stringify({ name, email, message }),
+      headers,
+      method: 'POST'
+    }).then(res => {
+      clearTimeout(timeout);
+      setLoading(false);
+      setError(!res.ok);
+      setSent(res.ok);
+    });
   };
 
   return (
@@ -50,13 +84,17 @@ const Footer: React.FC = () => {
             href="https://pengmai.github.io"
             target="_blank"
             rel="noopener noreferrer"
-          > Jacob Peng </a>
-          &amp; 
-          <a 
-          href="http://vincenthuang.info/"
-          target="_blank"
-          rel="noopener noreferrer"
-          > Chenzhun Huang </a>
+          >
+            {' '}Jacob Peng{' '}
+          </a>
+          &amp;
+          <a
+            href="http://vincenthuang.info/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {' '}Chenzhun Huang
+          </a>
         </div>
       </div>
       <div className="contact">
@@ -68,7 +106,7 @@ const Footer: React.FC = () => {
             type="text"
             value={name}
             onChange={updateName}
-            placeholder="Name*"
+            placeholder="Your Name*"
           />
           <label>
             Email:
@@ -77,14 +115,33 @@ const Footer: React.FC = () => {
             type="email"
             value={email}
             onChange={updateEmail}
-            placeholder="Email*"
+            placeholder="Your Email*"
           />
-          <textarea value={message} onChange={updateMessage} placeholder="Message*"/>
+          <textarea
+            value={message}
+            onChange={updateMessage}
+            placeholder="Your Message*"
+          />
           <input
             type="submit"
-            value="Submit"
-            disabled={!(name && email && message)}
+            value={
+              loading
+                ? 'Loading...'
+                : sent
+                  ? 'Sent! We\'ll be in touch 😊'
+                  : 'Submit'
+            }
+            disabled={loading || sent || !(name && email && message)}
           />
+          {error && (
+            <div className="alert alert-danger">
+              Oh no, we couldn&apos;t send your message! Email us at
+              <strong>
+                {' '}info.effusion@gmail.com{' '}
+              </strong>
+              and we&apos;ll get back to you as soon as possible.
+            </div>
+          )}
         </form>
       </div>
       <div className="contact-blurb">

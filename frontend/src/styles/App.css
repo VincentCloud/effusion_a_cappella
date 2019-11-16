@@ -431,3 +431,14 @@ blockquote:nth-of-type(even) footer:after {
 .App-footer label {
   display: none;
 }
+
+.alert-danger {
+  color: #E74C3C;
+  border: 1px solid #E74C3C;
+}
+
+.alert {
+  padding: .7rem;
+  margin: 1rem 0;
+  border-radius: .25rem;
+}

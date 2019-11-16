@@ -15,8 +15,6 @@ import './styles/member_detail.css';
 import './styles/members.css';
 import './styles/news.css';
 
-// import sampleData from './sampleData';
-
 const App: React.FC = () => {
   const data = (window as any).EFFUSION_PARAMS;
   return (

@@ -1,9 +1,5 @@
 import IMediaItem from './models/IMediaItem';
 
-import clemence from './images/clemence.jpg';
-import jacob from './images/jacob.jpg';
-import victor from './images/victor.jpg';
-
 const media: IMediaItem[] = [
   {
     caption: 'Lovely Day - Effusion A Cappella (Cover of Bill Withers)',

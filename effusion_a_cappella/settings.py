@@ -24,7 +24,7 @@ SECRET_KEY = '^khrh-o$ua4r0gp^_p^%w^gx-&uqj61$!5u*7=jfwpw)@zvdmc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eff9c79c.ngrok.io', 'localhost']
 
 # Application definition
 
@@ -138,4 +138,4 @@ EMAIL_HOST_USER = 'chenzhun.huang@gmail.com'
 EMAIL_HOST_PASSWORD = 'vevvkjtnpszhjbie'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-
+EMAIL_RECIPIENTS = ['jacob.peng@hotmail.com']
