@@ -14,19 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path, include
 from django.conf import settings
 from django.conf.urls.static import static
-import events.views
-import members.views
-import videos.views
 import emailsender.views
+import reactloader.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', events.views.home, name='home'),
-    path('events', events.views.events, name='events'),
-    path('members', members.views.members, name='members'),
-    path('videos', videos.views.videos, name='videos'),
-    path('contact', emailsender.views.sendemail, name='emailsender')
-] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    re_path(r'admin/?', admin.site.urls),
+    path('contact', emailsender.views.send_email, name='emailsender')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
+    path('', include('reactloader.urls'))
+]

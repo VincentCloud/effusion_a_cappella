@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Video
+from .models import Media
 
-admin.site.register(Video)
+admin.site.register(Media)
 

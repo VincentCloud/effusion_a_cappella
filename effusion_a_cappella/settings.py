@@ -24,7 +24,7 @@ SECRET_KEY = '^khrh-o$ua4r0gp^_p^%w^gx-&uqj61$!5u*7=jfwpw)@zvdmc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eff9c79c.ngrok.io', 'localhost']
 
 # Application definition
 
@@ -33,12 +33,15 @@ INSTALLED_APPS = [
     'members.apps.MembersConfig',
     'videos.apps.VideosConfig',
     'events.apps.EventsConfig',
+    'reactloader.apps.ReactloaderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'frontend'
 ]
 
 MIDDLEWARE = [
@@ -56,8 +59,7 @@ ROOT_URLCONF = 'effusion_a_cappella.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'effusiondb',
-        'USER': 'postgres',
-        'PASSWORD': 'Zz19990518',
+        'USER': 'Appleliu',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -136,4 +138,4 @@ EMAIL_HOST_USER = 'chenzhun.huang@gmail.com'
 EMAIL_HOST_PASSWORD = 'vevvkjtnpszhjbie'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-
+EMAIL_RECIPIENTS = ['jacob.peng@hotmail.com']

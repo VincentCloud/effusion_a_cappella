@@ -4,18 +4,18 @@ import MemberDetail from './MemberDetail';
 import IMember from './models/IMember';
 
 interface IMemberPhotoProps {
-  name: string;
-  part: string;
+  member: IMember;
   onClick?: () => void;
-  src: string;
-  years: string;
 }
 
 const MemberPhoto: React.FC<IMemberPhotoProps> = props => {
   const [noHover, setNoHover] = useState(false);
   return (
     <div className="App-member" onClick={props.onClick}>
-        <Img src={props.src} alt={props.name} />
+        <Img
+          src={props.member.thumbnail || props.member.src}
+          alt={props.member.name}
+        />
         <span
           className={`App-member-caption ${noHover ? 'no-hover' : ''}`}
           onMouseLeave={e => {
@@ -30,10 +30,10 @@ const MemberPhoto: React.FC<IMemberPhotoProps> = props => {
           onClick={() => setNoHover(true)}
         >
           <span>
-            {props.name}
+            {props.member.name}
             <br />
             <small>
-                {props.part} | {props.years}
+                {props.member.part} | {props.member.years}
             </small>
           </span>
         </span>
@@ -62,7 +62,7 @@ const Members: React.FC<IMembersProps> = ({ members }) => {
       <div className="App-members-gallery">
         {members.map(member =>
           <MemberPhoto
-            {...member}
+            member={member}
             onClick={() => {
               setShowModal(true);
               document.body.style.overflow = 'hidden';
