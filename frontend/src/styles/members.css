@@ -17,7 +17,7 @@
 }
 
 span.App-member-caption {
-  display: table;
+  display: block;
   border-radius: 2px;
   background: rgba(0,0,0,0.5);
   cursor: pointer;
@@ -33,9 +33,11 @@ span.App-member-caption {
 }
 
 span.App-member-caption span {
-  display: table-cell;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  vertical-align: middle;
+  height: 100%;
   color: white;
   font-size: 2.2em;
   font-style: bold;

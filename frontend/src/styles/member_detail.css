@@ -1,5 +1,5 @@
 .App-modal {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   overflow-y: auto;
   left: 0;

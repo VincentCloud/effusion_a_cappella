@@ -73,6 +73,23 @@ const media: IMediaItem[] = [
 ];
 
 export default {
+  homeImages: [
+    {
+      caption: `Adrift | Spring Concert '19`,
+      credits: 'Nicolas Photographie',
+      src: 'https://effusion.ca/wp-content/uploads/2019/08/Carousel-1.jpg'
+    },
+    {
+      caption: `Adrift | Spring Concert '19`,
+      credits: 'Nicolas Photographie',
+      src: 'https://effusion.ca/wp-content/uploads/2019/08/Carousel-3.jpg'
+    },
+    {
+      caption: `Adrift | Spring Concert '19`,
+      credits: 'Nicolas Photographie',
+      src: 'https://effusion.ca/wp-content/uploads/2019/08/Carousel-2.jpg'
+    }
+  ],
   media,
   members: [
     {
