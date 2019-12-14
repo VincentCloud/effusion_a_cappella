@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from events.models import Event
-from events.serializers import EventSerializer
+from events.models import NewsPost
+from events.serializers import NewsPostSerializer
 from rest_framework import generics
 
-class EventListCreate(generics.ListCreateAPIView):
+class NewsPostListCreate(generics.ListCreateAPIView):
     '''
     Generic API views for the Event models
     '''
-    queryset = Event.objects.all()
-    serializer_class = EventSerializer
+    queryset = NewsPost.objects.all()
+    serializer_class = NewsPostSerializer
 

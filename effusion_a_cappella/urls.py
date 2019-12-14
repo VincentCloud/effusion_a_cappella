@@ -22,6 +22,9 @@ import reactloader.views
 
 urlpatterns = [
     re_path(r'admin/?', admin.site.urls),
+    path('', include('events.urls')),
+    path('', include('members.urls')),
+    path('', include('videos.urls')),
     path('contact', emailsender.views.send_email, name='emailsender')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     path('', include('reactloader.urls'))

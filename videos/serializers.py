@@ -1,7 +1,23 @@
 from rest_framework import serializers
-from videos.models import Media
+from videos.models import MediaPhoto, MediaVideo
 
-class MediaSerializer(serializers.ModelSerializer):
+class MediaPhotoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Media
+        model = MediaPhoto
         fields = '__all__'
+
+    def to_representation(self, instance):
+        ret = super().to_representation(instance)
+        ret['type'] = 'photo'
+        return ret
+
+class MediaVideoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MediaVideo
+        fields = '__all__'
+
+    def to_representation(self, instance):
+        ret = super().to_representation(instance)
+        ret['type'] = 'video'
+        ret['id'] = ret['videoId']
+        return ret

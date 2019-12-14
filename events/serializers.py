@@ -1,8 +1,9 @@
 from rest_framework import serializers
-from events.models import Event
+from events.models import NewsPost
 
+class NewsPostSerializer(serializers.ModelSerializer):
+    date = serializers.DateField('%Y/%m/%d')
 
-class EventSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Event
-        fields = ('body', 'date', 'title')
+        model = NewsPost
+        fields = '__all__'

@@ -1,12 +1,10 @@
 from django.db import models
-import datetime
+from datetime import date
 
-
-class Event(models.Model):
-    body = models.CharField(max_length=10000, default='')
-    date = models.DateField(auto_now_add=True, null=True, blank=True)
-    title = models.CharField(max_length=5000, default='')
+class NewsPost(models.Model):
+    title = models.CharField(max_length=100)
+    date = models.DateField(default=date.today)
+    body = models.TextField(default='')
 
     def __str__(self):
         return self.title
-    

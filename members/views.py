@@ -1,14 +1,14 @@
 from django.shortcuts import render
-from members.models import Current, Alumni
-from members.serializers import CurrentSerializer, AlumniSerializer
+from members.models import Member, Alumni
+from members.serializers import MemberSerializer, AlumniSerializer
 from rest_framework import generics
 
-class CurrentListCreate(generics.ListCreateAPIView):
+class MemberListCreate(generics.ListCreateAPIView):
     '''
     Generic API views for the current members models
     '''
-    queryset = Current.objects.all()
-    serializer_class = CurrentSerializer
+    queryset = Member.objects.all()
+    serializer_class = MemberSerializer
 
 class AlumniListCreate(generics.ListCreateAPIView):
     '''

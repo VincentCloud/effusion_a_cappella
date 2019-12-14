@@ -1,21 +1,14 @@
 from django.shortcuts import render
-from videos.models import Media
-from videos.serializers import MediaSerializer
 from rest_framework import generics
-from .models import (
-    Member,
-    HomeImage,
-    MediaPhoto,
-    MediaVideo,
-    NewsPost
-)
-from .serializers import (
-    MemberSerializer,
-    HomeImageSerializer,
-    MediaPhotoSerializer,
-    MediaVideoSerializer,
-    NewsPostSerializer
-)
+
+from events.models import NewsPost
+from events.serializers import NewsPostSerializer
+from members.models import Member
+from members.serializers import MemberSerializer
+from videos.models import MediaPhoto, MediaVideo
+from videos.serializers import MediaPhotoSerializer, MediaVideoSerializer
+from .models import HomeImage
+from .serializers import HomeImageSerializer
 
 import json
 
