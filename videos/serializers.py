@@ -19,5 +19,5 @@ class MediaVideoSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         ret = super().to_representation(instance)
         ret['type'] = 'video'
-        ret['id'] = ret['videoId']
+        ret['id'] = ret['video_id']
         return ret

@@ -4,7 +4,7 @@ IMAGE_DIR = 'images/'
 
 class Member(models.Model):
     bio = models.TextField(default='')
-    execPosition = models.CharField(max_length=200, default='', blank=True, null=True)
+    exec_position = models.CharField(max_length=200, default='', blank=True, null=True)
     name = models.CharField(max_length=200)
     part = models.CharField(max_length=200)
     src = models.ImageField(upload_to=IMAGE_DIR)
