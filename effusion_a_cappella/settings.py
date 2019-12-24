@@ -145,6 +145,6 @@ YOUTUBE_KEY = 'AIzaSyB8rCUM0tRe3XtrgAqME5W7rsyAwQhwi7o'
 
 # Overwrite the local settings
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
