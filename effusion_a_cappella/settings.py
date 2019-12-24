@@ -139,3 +139,5 @@ EMAIL_HOST_PASSWORD = 'vevvkjtnpszhjbie'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_RECIPIENTS = ['jacob.peng@hotmail.com']
+
+YOUTUBE_KEY = ''
