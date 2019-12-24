@@ -140,7 +140,7 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_RECIPIENTS = ['jacob.peng@hotmail.com']
 
-# YOUTUBE_KEY = '' Your Youtube Key
+YOUTUBE_KEY = 'AIzaSyB8rCUM0tRe3XtrgAqME5W7rsyAwQhwi7o'
 
 
 # Overwrite the local settings
