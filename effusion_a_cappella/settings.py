@@ -141,3 +141,10 @@ EMAIL_USE_SSL = False
 EMAIL_RECIPIENTS = ['jacob.peng@hotmail.com']
 
 YOUTUBE_KEY = ''
+
+
+# Overwrite the local settings
+try:
+    from local_settings import *
+except ImportError:
+    pass
