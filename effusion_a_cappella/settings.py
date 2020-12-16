@@ -24,7 +24,7 @@ SECRET_KEY = '^khrh-o$ua4r0gp^_p^%w^gx-&uqj61$!5u*7=jfwpw)@zvdmc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['eff9c79c.ngrok.io', 'localhost']
+ALLOWED_HOSTS = ['eff9c79c.ngrok.io', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'frontend'
+    'frontend',
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -81,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'effusiondb',
-        'USER': 'Appleliu',
-        'PASSWORD': '',
+        'USER': 'postgres',
+        'PASSWORD': 'Zz19990518',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -138,7 +139,7 @@ EMAIL_HOST_USER = 'chenzhun.huang@gmail.com'
 EMAIL_HOST_PASSWORD = 'vevvkjtnpszhjbie'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_RECIPIENTS = ['jacob.peng@hotmail.com']
+EMAIL_RECIPIENTS = ['chenzhun.huang@mail.mcgill.ca']
 
 YOUTUBE_KEY = 'AIzaSyB8rCUM0tRe3XtrgAqME5W7rsyAwQhwi7o'
 
