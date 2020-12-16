@@ -10,8 +10,9 @@ class MemberSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         ret = super().to_representation(instance)
         ret = OrderedDict(filter(lambda x: x[1], ret.items()))
-        ret['execPosition'] = ret['exec_position']
-        del ret['exec_position']
+        if 'exec_position' in ret:
+            ret['execPosition'] = ret['exec_position']
+            del ret['exec_position']
         return ret
 
 class AlumniSerializer(serializers.ModelSerializer):

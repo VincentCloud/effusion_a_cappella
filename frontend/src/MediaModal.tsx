@@ -22,7 +22,7 @@ const MediaPlayer: React.FC<IMediaPlayerProps> = props => {
           className="App-youtube-player"
           videoId={props.item.id}
           opts={{
-            playerVars: { autoplay: 1 }
+            playerVars: { autoplay: 0 }
           }}
           onReady={e => props.setPlayer(e.target)}
         />
