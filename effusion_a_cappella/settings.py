@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'effusiondb',
-        'USER': 'postgres',
-        'PASSWORD': 'Zz19990518',
+        'USER': 'AppleLiu',
+        'PASSWORD': 'Effusion.2020',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -139,7 +139,7 @@ EMAIL_HOST_USER = 'chenzhun.huang@gmail.com'
 EMAIL_HOST_PASSWORD = 'vevvkjtnpszhjbie'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_RECIPIENTS = ['chenzhun.huang@mail.mcgill.ca']
+EMAIL_RECIPIENTS = ['info.effusion@gmail.com']
 
 # Overwrite the local settings
 try:
