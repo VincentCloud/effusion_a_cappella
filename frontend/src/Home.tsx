@@ -11,9 +11,13 @@ interface IHomeProps {
 
 const Home: React.FC<IHomeProps> = ({ images }) => (
   <Slider
+    autoplay
+    autoplaySpeed={6000}
+    pauseOnHover={false}
+    fade
     dots={true}
     infinite={true}
-    speed={500}
+    speed={800}
     slidesToShow={1}
   >
     {images.map(image =>

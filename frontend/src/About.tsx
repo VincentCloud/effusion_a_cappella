@@ -56,16 +56,6 @@ const About: React.FC = () => (
       </p>
       <footer>Abid Virani [Abid Virani: In Words]</footer>
     </blockquote>
-    <blockquote>
-      <p>
-        <q>
-          It&apos;s like church choir, except without the church and they have
-          no god, but they're not total heathens. It's good. Yes. That's
-          perfect.
-        </q>
-      </p>
-      <footer>Julie Phan [Governor's General Literary Award Winner]</footer>
-    </blockquote>
   </div>
 );
 

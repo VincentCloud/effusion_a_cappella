@@ -73,17 +73,17 @@ export default {
     {
       caption: `Adrift | Spring Concert '19`,
       credits: 'Nicolas Photographie',
-      src: 'https://effusion.ca/wp-content/uploads/2019/08/Carousel-1.jpg'
+      src: 'https://effusion.ca/media/images/79255438_10157445755146620_6928184708358471680_o.jpg'
     },
     {
       caption: `Adrift | Spring Concert '19`,
       credits: 'Nicolas Photographie',
-      src: 'https://effusion.ca/wp-content/uploads/2019/08/Carousel-3.jpg'
+      src: 'https://effusion.ca/media/images/79689914_10157445746926620_3573118679501504512_o.jpg'
     },
     {
       caption: `Adrift | Spring Concert '19`,
       credits: 'Nicolas Photographie',
-      src: 'https://effusion.ca/wp-content/uploads/2019/08/Carousel-2.jpg'
+      src: 'https://effusion.ca/media/images/81198168_10157445746566620_4719088620625985536_o.jpg'
     }
   ],
   media,
